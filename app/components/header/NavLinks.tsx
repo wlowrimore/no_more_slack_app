@@ -39,16 +39,16 @@ const NavLinksComp: React.FC = () => {
     <main className="flex border-b border-neutral-400/30 xl:w-[46.5rem] justify-between">
       <nav className="flex justify-center items-center">
         <ul className="flex text-lg px-4 py-4 justify-around">
-          <Link href="/">
-            <li className={getLinkClasses("/")}>
-              <AiTwotoneStar size={24} />
-              <span className="text-xs tracking-wider ml-1 mt-1 h-full flex items-end">
-                Home
-              </span>
-            </li>
-          </Link>
           {session.status === "authenticated" ? (
             <>
+              <Link href="/">
+                <li className={getLinkClasses("/")}>
+                  <AiTwotoneStar size={24} />
+                  <span className="text-xs tracking-wider ml-1 mt-1 h-full flex items-end">
+                    Home
+                  </span>
+                </li>
+              </Link>
               <Link href="/mission-statement">
                 <li className={getLinkClasses("/mission-statement")}>
                   <AiFillSketchCircle size={24} />
@@ -95,8 +95,8 @@ const NavLinksComp: React.FC = () => {
               </Link>
             </>
           ) : (
-            <div className="w-full mx-22 px-4 flex items-center bg-sky-700/30 border border-neutral-400/40 rounded">
-              <h2 className="text-amber-100 text-lg">
+            <div className="w-[26rem] px-4 -ml-7 flex items-center">
+              <h2 className="text-amber-200 text-lg">
                 Please Sign in Below to Continue
               </h2>
             </div>
