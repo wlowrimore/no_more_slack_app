@@ -1,14 +1,15 @@
 import React from "react";
+import FooterDonateComp from "./UI/FooterDonateComp";
 
 const MissionComp = () => {
   return (
-    <main className="flex flex-col max-w-8xl px-14 mx-auto py-12">
+    <section className="flex flex-col max-w-8xl px-8 mx-auto py-12">
       <article className="leading-relaxed">
         <h1 className="text-5xl font-semibold tracking-wide flex justify-center py-6">
           Mission Statement: A Platform for "
           <span className="text-red-800">We</span>
           <span className="text-white ml-1">The</span>
-          <span className="text-sky-950 ml-1">People</span>"
+          <span className="text-sky-800 ml-1">People</span>"
         </h1>
         <hr className="max-w-[75.3rem] flex justify-center mx-auto -mt-5 mb-6"></hr>
         <p className="max-w-[75.3rem] text-lg flex flex-col mx-auto tracking-wider text-amber-200">
@@ -46,7 +47,7 @@ const MissionComp = () => {
           future of our nation.
         </p>
       </article>
-    </main>
+    </section>
   );
 };
 

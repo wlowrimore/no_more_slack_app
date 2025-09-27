@@ -93,7 +93,7 @@ const NewsCarousel = ({ articles }: NewsCarouselProps) => {
                     <img
                       src={article.image_url}
                       alt={article.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-fill object-cover hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = "none";
                       }}

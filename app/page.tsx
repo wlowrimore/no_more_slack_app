@@ -35,6 +35,7 @@ import fetchNewsData from "@/lib/fetchNews";
 import GoogleSignIn from "./components/authComponents/GoogleSignIn";
 import NewsCarousel from "./components/UI/NewsCarousel";
 import FrontPageArticleComp from "./components/UI/FrontPageArticleComp";
+import FooterDonateComp from "./components/UI/FooterDonateComp";
 
 export default async function Home() {
   const session = await auth();
@@ -54,7 +55,10 @@ export default async function Home() {
   return (
     <main className="w-8xl p-12 h-screen flex flex-col items-center">
       {session ? (
-        <NewsCarousel articles={newsData.results || []} />
+        <>
+          <NewsCarousel articles={newsData.results || []} />
+          {/* <FooterDonateComp /> */}
+        </>
       ) : (
         <section className="flex">
           <GoogleSignIn />
