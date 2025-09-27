@@ -30,7 +30,7 @@ const Header = ({ isActivePath }: { isActivePath: boolean }) => {
                 <span className="text-red-800">SLACK</span>
               </h1>
             </div>
-            <span className="absolute left-[42.5rem] top-[2.7rem] dot-separator"></span>
+            <span className="absolute left-[41.5rem] top-[2.7rem] dot-separator"></span>
             <div className="py-[0.37rem] leading-7.5 flex flex-col items-end">
               <h2 className="text-[1.8rem] text-nueutral-200">
                 IT&apos;S&nbsp;TIME
@@ -46,7 +46,18 @@ const Header = ({ isActivePath }: { isActivePath: boolean }) => {
         </section>
       </header>
       <section className="flex items-center justify-center ml-16">
-        {!isMissionPath ? <MissionBlurb /> : null}
+        {!isMissionPath ? (
+          <MissionBlurb />
+        ) : (
+          <div className="max-w-2xl max-h-[8rem] pt-3 bg-[#0a0a0a]">
+            <article className="text-[#0a0a0a] tracking-wider text-sm">
+              We are committed to creating a space where the power of individual
+              expression can be fully realized. This platform is not just a
+              place to...read further
+            </article>
+          </div>
+        )}
+        <div className="max-w-2xl.max-h-[8rem] pt-3 bg-[#0a0a0a]"></div>
         <Avatar />
       </section>
     </>
