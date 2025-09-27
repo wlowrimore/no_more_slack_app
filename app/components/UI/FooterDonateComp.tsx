@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useSession } from "next-auth/react";
 import DonationModal from "./Modals/DonationModal";
+import { Slide } from "react-awesome-reveal";
 
 const FooterDonateComp = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

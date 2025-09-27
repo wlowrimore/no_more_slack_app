@@ -19,7 +19,7 @@ const DonationForm: React.FC<DonationFormProps> = ({ onSuccess }) => {
     email: "",
   });
 
-  const predefinedAmounts = [10, 25, 50, 100];
+  const predefinedAmounts = [3, 10, 25, 50];
 
   const cardElementOptions = {
     style: {
@@ -160,7 +160,7 @@ const DonationForm: React.FC<DonationFormProps> = ({ onSuccess }) => {
                 setAmount(presetAmount);
                 setIsCustom(false);
               }}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
                 !isCustom && amount === presetAmount
                   ? "bg-red-800 text-white"
                   : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
@@ -174,7 +174,7 @@ const DonationForm: React.FC<DonationFormProps> = ({ onSuccess }) => {
           <button
             type="button"
             onClick={() => setIsCustom(!isCustom)}
-            className="text-sm text-red-800 hover:text-red-900 font-medium"
+            className="text-sm text-red-800 hover:text-blue-800 font-medium cursor-pointer"
           >
             {isCustom ? "Choose preset amount" : "Enter custom amount"}
           </button>

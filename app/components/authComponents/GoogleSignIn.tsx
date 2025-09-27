@@ -22,7 +22,7 @@ const GoogleSignIn = () => {
   // Show loading state
   if (status === "loading") {
     return (
-      <div className="border border-amber-50/70 rounded-full w-fit py-1.5 px-4 flex cursor-pointer">
+      <div className="bg-sky-600/30 border border-amber-50/30 rounded-lg w-fit py-1.5 px-4 flex cursor-pointer">
         <span className="ml-2 text-xl">Loading...</span>
       </div>
     );
@@ -33,7 +33,7 @@ const GoogleSignIn = () => {
       onClick={handleAuthClick}
       className={`${
         session ? "hidden" : "block"
-      } border border-amber-50/70 rounded w-fit py-2 px-3 flex cursor-pointer hover:bg-sky-600/30 transition-colors duration-200 ease-in-out items-center`}
+      } border border-amber-50/30 rounded-lg w-fit py-2 px-3 flex cursor-pointer hover:bg-sky-600/30 transition-colors duration-200 ease-in-out items-center`}
       type="button"
     >
       <svg
