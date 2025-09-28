@@ -26,7 +26,7 @@ const Header = ({ isActivePath }: { isActivePath: boolean }) => {
           <section className="grid grid-cols-2">
             <div className="relative">
               <h1 className="text-7xl text-neutral-200 ">
-                NOM<span className="text-sky-700">O</span>RE
+                NOM<span className="text-sky-600">O</span>RE
                 <span className="text-red-800">SLACK</span>
               </h1>
             </div>
@@ -35,7 +35,7 @@ const Header = ({ isActivePath }: { isActivePath: boolean }) => {
               <h2 className="text-[1.8rem] text-nueutral-200">
                 IT&apos;S&nbsp;TIME
               </h2>
-              <span className="text-sky-700 text-[2rem] p-0 -ml-2">
+              <span className="text-sky-600 text-[2rem] p-0 -ml-2">
                 &nbsp;WE&nbsp;<span className="text-neutral-200">ACT</span>
               </span>
             </div>

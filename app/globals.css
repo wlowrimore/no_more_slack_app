@@ -5,6 +5,13 @@
   --foreground: #171717;
 }
 
+@theme {
+  /* 1. Define the custom animation utility that 
+       overrides or extends the default.
+  */
+  --animate-pulse-fast: pulse 0.5s cubic-bezier(0.7, 0, 0.6, 1) infinite;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
