@@ -76,7 +76,7 @@ const NavLinksComp: React.FC = () => {
                 </li>
               </Link>
 
-              <Link href="/links">
+              <Link href="/useful-links">
                 <li className={getLinkClasses("/links")}>
                   <AiOutlineLink size={24} />
                   <span className="text-xs tracking-wider ml-1 mt-1 h-full flex items-end">
