@@ -28,7 +28,7 @@ export default async function BlogPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">Blog Posts</h1>
+      <h1 className="text-4xl text-slate-500 font-bold mb-8">Blog Posts</h1>
 
       {posts.length === 0 ? (
         <p className="text-gray-600">
