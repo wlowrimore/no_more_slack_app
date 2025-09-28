@@ -33,5 +33,22 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(201, 93, 5);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--foreground);
 }

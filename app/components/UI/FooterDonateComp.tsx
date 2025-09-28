@@ -12,7 +12,7 @@ const FooterDonateComp = () => {
   return (
     <>
       {session && (
-        <main className="w-full flex justify-center items-center">
+        <main className="w-[45.5rem] flex justify-center items-center ml-[12.5rem]">
           <div className="flex items-center gap-4 max-w-[54rem] h-full border border-neutral-400/80 rounded-md p-4 bg-amber-200/85 -ml-[13rem]">
             <h2 className="text-normal font-semibold text-neutral-950 tracking-wide leading-5">
               Defending democracy starts with informed citizens. This platform

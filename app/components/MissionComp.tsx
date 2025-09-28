@@ -7,7 +7,7 @@ const MissionComp = () => {
   const { data: session } = useSession();
 
   return (
-    <section className="flex flex-col max-w-4xl px-8 mx-auto py-12">
+    <section className="flex flex-col max-w-4xl px-8 mx-auto pt-12 pb-40">
       {!session ? (
         <section className="max-w-8xl flex flex-col items-center justify-center mt-22">
           <h1 className="text-8xl text-red-500 font-semibold tracking-wide animate-pulse-fast">
@@ -29,7 +29,7 @@ const MissionComp = () => {
             <span className="text-sky-800 ml-1">People</span>"
           </h1>
           <hr className="max-w-[75.3rem] flex justify-center mx-auto -mt-5 mb-6"></hr>
-          <p className="max-w-[75.3rem] text-lg flex flex-col mx-auto tracking-wider text-amber-200">
+          <p className="max-w-[75.3rem] max-h-[28rem] overflow-auto text-lg flex flex-col pr-6 mx-auto tracking-wider text-amber-200">
             Our mission is to empower &quot;We the People&quot; by providing an
             unyielding platform for the free exchange of political thought and
             opinion. In a world of increasing political division and filtered
@@ -63,6 +63,20 @@ const MissionComp = () => {
             right of every person to speak their mind, to challenge the status
             quo, and to contribute to the ongoing, vital conversation that
             shapes the future of our nation.
+            <br />
+            <br />
+            To sustain this vital mission, we rely on the generosity of citizens
+            who believe in the power of free speech and democratic
+            participation. Your donations directly support our commitment to
+            keeping this platform free and accessible while enabling us to
+            maintain current, factual content and resources. Beyond our digital
+            presence, your contributions help us provide essential materials for
+            peaceful civic engagement—including informational signs, educational
+            t-shirts, awareness bumper stickers, and printed pamphlets that
+            empower citizens to participate meaningfully in their communities.
+            Every dollar donated strengthens our collective voice and ensures
+            that the tools of democracy remain within reach of every American
+            who chooses to stand up and be counted.
           </p>
         </article>
       )}
