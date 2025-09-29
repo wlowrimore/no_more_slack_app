@@ -28,7 +28,7 @@ export default function linkCategories(): LinkCategory[] {
   return [
     {
       title: "Political Fact-Checking",
-      icon: <Eye className="w-5 h-5" />,
+      icon: <Eye className="w-8 h-8" />,
       description:
         "Verify claims and combat misinformation with trusted fact-checking resources",
       links: [

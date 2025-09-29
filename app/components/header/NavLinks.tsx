@@ -77,7 +77,7 @@ const NavLinksComp: React.FC = () => {
               </Link>
 
               <Link href="/useful-links">
-                <li className={getLinkClasses("/links")}>
+                <li className={getLinkClasses("/useful-links")}>
                   <AiOutlineLink size={24} />
                   <span className="text-xs tracking-wider ml-1 mt-1 h-full flex items-end">
                     Links
@@ -86,7 +86,7 @@ const NavLinksComp: React.FC = () => {
               </Link>
 
               <Link href="/blog">
-                <li className={getLinkClasses("/blogs")}>
+                <li className={getLinkClasses("/blog")}>
                   <AiFillInfoCircle size={24} />
                   <span className="text-xs tracking-wider ml-1 mt-1 h-full flex items-end">
                     Blog
