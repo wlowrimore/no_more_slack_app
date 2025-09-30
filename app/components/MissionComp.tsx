@@ -7,7 +7,7 @@ const MissionComp = () => {
   const { data: session } = useSession();
 
   return (
-    <section className="flex flex-col max-w-4xl px-8 mx-auto pt-12 pb-40">
+    <section className="flex flex-col max-w-8xl px- mx-auto pt-12 pb-40">
       {!session ? (
         <section className="max-w-8xl flex flex-col items-center justify-center mt-22">
           <h1 className="text-8xl text-red-500 font-semibold tracking-wide animate-pulse-fast">
