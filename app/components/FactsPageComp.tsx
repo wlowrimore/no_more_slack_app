@@ -33,19 +33,13 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
         <section className="w-full h-screen pb-32 mx-auto grid grid-cols-4 gap-4">
           {documents.map((document) => (
             <div className="flex flex-col border border-slate-500/50 rounded-xl">
-              <Link
-                key={document.id}
-                href={`/facts/${document.id}`}
-                className="relative h-48 overflow-hiddenh-full rounded-t-lg bg-white border border-slate-500 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-              >
-                <Image
-                  src={document.image}
-                  alt={document.title}
-                  width={300}
-                  height={200}
-                  className="w-full h-full object-cover rounded-t-lg hover:scale-105 transition-transform duration-300"
-                />
-              </Link>
+              <Image
+                src={document.image}
+                alt={document.title}
+                width={300}
+                height={200}
+                className="w-full h-56 object-cover rounded-t-lg hover:scale-105 transition-transform duration-300"
+              />
               <div className="p-3">
                 <h2 className="text-3xl mb-1 text-amber-300/70 font-semibold tracking-wide flex">
                   {document.title}
@@ -69,7 +63,9 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                       className="pl-5 list-disc text-sm text-blue-300 tracking-widest underline"
                     >
                       <li className="leading-relaxed">
-                        <a href={source.url}>{source.name}</a>
+                        <a href={source.url} className="hover:text-blue-500">
+                          {source.name}'
+                        </a>
                       </li>
                     </ul>
                   ))}

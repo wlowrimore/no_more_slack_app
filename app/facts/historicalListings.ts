@@ -1,6 +1,7 @@
 export const historicalDocuments = [
   {
     id: 1,
+    slug: "declaration-of-independence",
     title: "Declaration of Independence",
     image: "/factsPageImages/u.s.declarationOfIndependence.png", // Replace with your actual image path
     description:
@@ -28,6 +29,7 @@ export const historicalDocuments = [
   },
   {
     id: 2,
+    slug: "constitution",
     title: "U.S. Constitution",
     image: "/factsPageImages/u.s.constitution.png", // Replace with your actual image path
     description:
@@ -55,6 +57,7 @@ export const historicalDocuments = [
   },
   {
     id: 3,
+    slug: "bill-of-rights",
     title: "Bill of Rights",
     image: "/factsPageImages/u.s.billOfRights.png", // Replace with your actual image path
     description:
@@ -82,6 +85,7 @@ export const historicalDocuments = [
   },
   {
     id: 4,
+    slug: "emancipation-proclamation",
     title: "Emancipation Proclamation",
     image: "/factsPageImages/emancipationProclamation.png", // Replace with your actual image path
     description:
