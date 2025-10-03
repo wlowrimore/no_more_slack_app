@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased px-12`}
       >
         <AuthProvider>
-          <section className="grid grid-cols-2 w-8xl pt-3 px-12">
+          <section className="sticky top-0 z-50 bg-[#0a0a0a] shadow-lg shadow-neutral-950 grid grid-cols-2 w-8xl pt-3 px-12">
             <Header isActivePath={true} />
           </section>
           {children}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useSession } from "next-auth/react";
+import NoAuthPageMMessage from "./UI/NoAuthPageMMessage";
 
 const MissionComp = () => {
   const { data: session } = useSession();
@@ -9,17 +10,7 @@ const MissionComp = () => {
   return (
     <section className="flex flex-col max-w-8xl px- mx-auto pt-12 pb-40">
       {!session ? (
-        <section className="max-w-8xl flex flex-col items-center justify-center mt-22">
-          <h1 className="text-8xl text-red-500 font-semibold tracking-wide animate-pulse-fast">
-            HEY!
-          </h1>
-          <h2 className="text-5xl font-semibold tracking-wide mb-6">
-            YOU CAN&apos;T BE IN HERE...
-          </h2>
-          <h3 className="text-2xl font-semibold tracking-wide">
-            - GO BACK AN SIGN IN PLEASE -
-          </h3>
-        </section>
+        <NoAuthPageMMessage />
       ) : (
         <article className="leading-relaxed">
           <h1 className="text-5xl font-semibold tracking-wide flex justify-center py-6">

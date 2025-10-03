@@ -81,7 +81,7 @@ export default function ArticleCarousel({
   }
 
   return (
-    <div className="w-full max-w-8xl mx-auto py-8 px-6">
+    <div className="w-full max-w-8xl mx-auto py-8 px-6 mt-22">
       <Carousel totalItems={articles.length} className="w-full">
         <CarouselContent>
           {pagedArticles.map((page, pageIndex) => (

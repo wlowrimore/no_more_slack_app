@@ -30,7 +30,7 @@ const Header = ({ isActivePath }: { isActivePath: boolean }) => {
                 <span className="text-red-800">SLACK</span>
               </h1>
             </div>
-            <span className="absolute left-[41.5rem] top-[2.7rem] dot-separator"></span>
+            <span className="absolute left-[38.5rem] top-[2.7rem] dot-separator"></span>
             <div className="py-[0.37rem] leading-7.5 flex flex-col items-end">
               <h2 className="text-[1.8rem] text-nueutral-200">
                 IT&apos;S&nbsp;TIME

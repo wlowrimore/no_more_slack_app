@@ -21,6 +21,7 @@ const NavLinksComp: React.FC = () => {
   const session = useSession();
 
   const isActive = (path: string) => pathname === path;
+  const isHomePath = (path: string) => pathname === path;
 
   // Special width for mission statement link
   const getLinkClasses = (path: string) => {
@@ -96,8 +97,10 @@ const NavLinksComp: React.FC = () => {
             </>
           ) : (
             <div className="w-[26rem] px-4 -ml-7 flex items-center">
-              <h2 className="text-amber-200 text-lg">
-                Please Sign in Below to Continue
+              <h2 className="text-amber-200/50 text-lg">
+                {isHomePath("/")
+                  ? "Please Sign in Below to Continue"
+                  : "You Are Not Signed In"}{" "}
               </h2>
             </div>
           )}
