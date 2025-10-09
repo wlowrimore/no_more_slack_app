@@ -32,7 +32,7 @@ const UsefulLinksComp: React.FC<UsefulLinksCompProps> = ({
 
   return (
     <main>
-      <section className="flex flex-col max-w-8xl px- mx-auto pt-12 pb-40">
+      <section className="flex flex-col max-w-8xl mx-auto pt-12 pb-40">
         {!session ? (
           <NoAuthPageMMessage />
         ) : (

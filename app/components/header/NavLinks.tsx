@@ -1,29 +1,25 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
+const { useSession } = require("next-auth/react");
 import Link from "next/link";
 import "./css/header.css";
 import {
-  AiFillHome,
   AiFillDashboard,
   AiFillCheckCircle,
   AiFillSketchCircle,
-  AiOutlineLogin,
-  AiOutlineLogout,
   AiFillInfoCircle,
   AiOutlineLink,
   AiTwotoneStar,
 } from "react-icons/ai";
 
 const NavLinksComp: React.FC = () => {
+  const { data: session } = useSession();
   const pathname = usePathname();
-  const session = useSession();
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => pathname === path; // (path: string) =>  path
   const isHomePath = (path: string) => pathname === path;
 
-  // Special width for mission statement link
   const getLinkClasses = (path: string) => {
     const baseClasses =
       "w-[7rem] flex justify-center items-center mx-1 cursor-pointer transition-transform hover:text-amber-200 bg-transparent hover:drop-shadow-[0_10px_30px_rgba(255,255,255,0.9)] rounded-full";
@@ -40,7 +36,15 @@ const NavLinksComp: React.FC = () => {
     <main className="flex border-b border-neutral-400/30 xl:w-[46.5rem] justify-between">
       <nav className="flex justify-center items-center">
         <ul className="flex text-lg px-4 py-4 justify-around">
-          {session.status === "authenticated" ? (
+          {!session ? (
+            <div className="w-[26rem] px-4 -ml-7 flex items-center">
+              <h2 className="text-amber-200/50 text-lg">
+                {isHomePath("/")
+                  ? "Please Sign in Below to Continue"
+                  : "You Are Not Signed In"}{" "}
+              </h2>
+            </div>
+          ) : (
             <>
               <Link href="/">
                 <li className={getLinkClasses("/")}>
@@ -95,14 +99,6 @@ const NavLinksComp: React.FC = () => {
                 </li>
               </Link>
             </>
-          ) : (
-            <div className="w-[26rem] px-4 -ml-7 flex items-center">
-              <h2 className="text-amber-200/50 text-lg">
-                {isHomePath("/")
-                  ? "Please Sign in Below to Continue"
-                  : "You Are Not Signed In"}{" "}
-              </h2>
-            </div>
           )}
         </ul>
       </nav>
