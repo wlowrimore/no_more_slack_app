@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { historicalDocuments } from "../facts/historicalListings";
 import NoAuthPageMMessage from "./UI/NoAuthPageMMessage";
+import Link from "next/link";
 export interface HistoricalDocumentsType {
   id: number;
   title: string;
@@ -212,9 +213,9 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                 </div>
               </section>
               {/* Health Administration */}
-              <section className="flex flex-col mx-auto pb-12">
+              <section className="flex flex-col mx-auto">
                 {/* Robert F. Kennedy Jr. */}
-                <div className="w-full mx-auto pb-32 pt-4">
+                <div className="w-full mx-auto pb-12 pt-4">
                   <h1 className="capitalize text-2xl text-amber-200 font-semibold tracking-wide flex pb-4">
                     Who needs experience when you have the name? -
                     <span className="text-red-500/90">
@@ -324,6 +325,289 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                     </div>
                   </div>
                 </div>
+              </section>
+              {/* Scientific Consensus VS Administration Claims */}
+              <section className="w-full mx-auto pb-32 pt-4">
+                <div className="w-full flex flex-col justify-center items-center text-2xl pb-4">
+                  <h1 className="text-3xl flex flex-col items-center text-amber-200 font-semibold tracking-wide capitalize">
+                    Scientific Consensus VS. Administration Claims
+                    <p className="text-red-500/90">
+                      &nbsp;acetaminophen &amp; Vaccine Safety
+                    </p>
+                    <p className="max-w-11/16 text-center text-[1rem] text-amber-100 tracking-wider leading-snug py-4">
+                      Scientific consensus on vaccines and common medications is
+                      established through rigorous, peer-reviewed, and
+                      large-scale studies. The claims promoted by some
+                      administration figures are not supported by this evidence.
+                    </p>
+                  </h1>
+                </div>
+
+                <section className="grid grid-cols-2 gap-6">
+                  {/* Left Column */}
+                  <div className="w-full mx-auto bg-amber-500/20 border border-amber-500/40 rounded-xl">
+                    <div className="text-sm flex flex-col px-3 py-3 text-amber-100 tracking-wider">
+                      <h3 className="w-fit font-semibold text-amber-200 text-lg underline ">
+                        Vaccines as Preventative Medicine
+                      </h3>
+                      <h4 className="w-fit text-amber-100 mb-3">
+                        The claim that vaccines are causing harm rather than
+                        keeping children safe directly contradicts the global
+                        scientific and medical consensus.
+                      </h4>
+                      <ul className="list-disc ml-4 space-y-3">
+                        <li>
+                          <span className="text-lg flex items-centerfont-semibold text-amber-200">
+                            Scientific Fact:
+                          </span>{" "}
+                          Vaccines are a cornerstone of public health, saving
+                          millions of lives annually by preventing diseases like
+                          measles, polio, diphtheria, and tetanus.
+                        </li>
+                        <li>
+                          <span className="text-lg flex items-centerfont-semibold text-amber-200">
+                            Safety & Autism:
+                          </span>{" "}
+                          Decades of comprehensive, large-scale studies by
+                          organizations worldwide (including the CDC, WHO, and
+                          major medical societies) have repeatedly found no
+                          causal link between vaccines and autism spectrum
+                          disorder (ASD). The 1998 study that originally
+                          suggested a link was retracted by the journal The
+                          Lancet and the lead author's medical license was
+                          revoked due to fraud.
+                        </li>
+                        <li>
+                          <span className="text-lg flex items-centerfont-semibold text-amber-200">
+                            Preventable Disease:
+                          </span>{" "}
+                          Widespread vaccination creates community immunity (or
+                          "herd protection"), which protects vulnerable
+                          populations who cannot be vaccinated (infants, the
+                          elderly, or those with compromised immune systems).
+                          When vaccination rates drop, highly infectious
+                          diseases like measles can and do return in outbreaks.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  {/* Right Column */}
+                  <div className="w-full mx-auto bg-amber-500/20 border border-amber-500/40 rounded-xl">
+                    <div className="text-sm flex flex-col px-3 py-3 text-amber-100 tracking-wider">
+                      <h3 className="w-fit font-semibold text-amber-200 text-lg underline ">
+                        Acetaminophen (Tylenol) and Autism
+                      </h3>
+                      <h4 className="w-fit text-amber-100 mb-3">
+                        The claim that acetaminophen use during pregnancy causes
+                        autism is not supported by the most rigorous scientific
+                        evidence.
+                      </h4>
+                      <ul className="list-disc ml-4 space-y-3">
+                        <li>
+                          <span className="text-lg flex items-centerfont-semibold text-amber-200">
+                            The Findings:
+                          </span>{" "}
+                          Some observational studies have shown a correlation
+                          (or association) between frequent or prolonged
+                          prenatal acetaminophen use and higher rates of
+                          neurodevelopmental issues.
+                        </li>
+                        <li>
+                          <span className="text-lg flex items-centerfont-semibold text-amber-200">
+                            The Crucial Distinction:
+                          </span>{" "}
+                          Correlation is not causation. The most
+                          methodologically rigorous studies, particularly those
+                          using sibling control analysis (the gold standard for
+                          controlling shared genetic and environmental factors
+                          within a family), have found no evidence of an
+                          increased risk of autism when familial confounding
+                          factors are properly accounted for.
+                        </li>
+                        <li>
+                          <span className="text-lg flex items-centerfont-semibold text-amber-200">
+                            Medical Guidance:
+                          </span>{" "}
+                          Acetaminophen is currently the only over-the-counter
+                          pain reliever and fever reducer consistently
+                          recommended as safe for use by major medical and
+                          obstetric organizations worldwide when taken as
+                          directed during pregnancy. Fever itself is a known
+                          risk factor for adverse fetal outcomes, which is why a
+                          safe reducer is medically necessary.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <section className="w-full mx-auto pb-32 pt-12">
+                  <div className="w-full mx-auto bg-amber-500/20 border border-amber-500/40 rounded-xl">
+                    <div className="text-sm flex flex-col px-3 py-3 text-amber-100 tracking-wider">
+                      <div className="w-full flex flex-col justify-center items-center text-2xl">
+                        <h1 className="text-3xl flex flex-col items-center text-amber-200 font-semibold tracking-wide capitalize">
+                          Precedent of Scientific Interference
+                          <p className="text-red-500/90">
+                            &nbsp;acetaminophen &amp; Vaccine Safety
+                          </p>
+                          <p className="max-w-11/16 text-center text-[1rem] text-amber-100 tracking-wider leading-snug pt-4">
+                            The politicization of science is not new, but has
+                            been highlighted by recent administrations. The
+                            previous Trump administration faced widespread
+                            criticism from scientific bodies for what was
+                            documented as political interference with federal
+                            science agencies (such as the CDC and EPA).
+                          </p>
+                          <p className="max-w-11/16 text-center text-[1rem] text-amber-100 tracking-wider leading-snug pt-6">
+                            Actions included suppressing, downplaying, or
+                            overriding scientific findings on issues like
+                            climate change and COVID-19 to align with political
+                            goals, leading to a breakdown of trust between
+                            career scientists and administration appointees.
+                          </p>
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  <section className="w-full mx-auto py-12">
+                    <div className="max-w-11/16 mx-auto text-center text-[1rem] text-amber-100 tracking-wider leading-snug pt-6">
+                      <p className="text-lg pb-3 text-amber-200 text-start">
+                        If you would like to further explore these issues please
+                        visit the following source links for more information:
+                      </p>
+                      <div>
+                        <Link
+                          href="https://www.pbs.org/newshour/politics/who-are-the-people-trump-has-picked-for-key-positions-in-his-second-administration-so-far#:~:text=Director%20of%20National%20Intelligence%3A%20Tulsi,Trump%20prizing%20loyalty%20over%20experience."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              PBS www.pbs.org
+                            </span>{" "}
+                            <span>
+                              Who are the people Trump has picked for key
+                              positions in his second administration so far
+                              Director of National Intelligence: Tulsi Gabbard.
+                              Former Hawaii Rep. Tulsi Gabbard has been tapped
+                              by Trump to be director of national intelligence,
+                              another ...
+                            </span>
+                          </p>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.verywellhealth.com/dr-oz-head-of-cms-nomination-8749068#:~:text=President%2Delect%20Donald%20Trump%20nominated,in%20government%20or%20healthcare%20administration."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              Verywell Health www.verywellhealth.com
+                            </span>{" "}
+                            <span>
+                              How Dr. Oz Could Change Medicare and Medicaid as
+                              Head of CMS - Verywell Health President-elect
+                              Donald Trump nominated the television personality
+                              Dr. Mehmet Oz, popularly known as Dr. Oz, to be
+                              the administrator of the Centers for Medicare ...
+                            </span>
+                          </p>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.healthychildren.org/English/safety-prevention/immunizations/Pages/vaccine-studies-examine-the-evidence.aspx#:~:text=As%20a%20parent%2C%20you%20can,safe%20for%20children%20and%20teens."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              HealthyChildren.org www.healthychildren.org
+                            </span>{" "}
+                            <span>
+                              Vaccine Safety: Examine the Evidence -
+                              HealthyChildren.org As a parent, you can be
+                              reassured to know that there have been hundreds of
+                              large-scale studies around the world on vaccine
+                              safety during the past few decades. ...
+                            </span>
+                          </p>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.pbs.org/newshour/health/12-ways-rfk-jr-has-undercut-vaccine-confidence-as-health-secretary#:~:text=Days%20later%2C%20Kennedy%20and%20the,been%20thoroughly%20debunked%20for%20years."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              PBS www.pbs.org
+                            </span>{" "}
+                            <span>
+                              12 ways RFK Jr. has undercut vaccine confidence as
+                              health secretary | PBS News Days later, Kennedy
+                              and the Trump administration repeated the claim,
+                              without evidence, that vaccines contributed to
+                              autism, a theory that has been thoroughly ...
+                            </span>
+                          </p>
+                        </Link>
+                      </div>
+                      12 ways RFK Jr. has undercut vaccine confidence as health
+                      secretary | PBS News Days later, Kennedy and the Trump
+                      administration repeated the claim, without evidence, that
+                      vaccines contributed to autism, a theory that has been
+                      thoroughly ... Our World in Data ourworldindata.org
+                      Vaccination - Our World in Data Vaccination. Vaccine
+                      technology has advanced dramatically. Vaccination helped
+                      eradicate smallpox worldwide. Vaccines have massively
+                      reduced the rates of ... Our World in Data
+                      ourworldindata.org Vaccination - Our World in Data
+                      Vaccines work by safely training the immune system to
+                      recognize and fight pathogens before they can cause
+                      serious illness. When enough people are vaccinated, ...
+                      National Foundation for Infectious Diseases www.nfid.org
+                      Vaccines Save Lives: What Is Driving Vaccine-Preventable
+                      Disease Outbreaks? - NFID When a community's immunization
+                      rates drop, disease inevitably follows. The problem is so
+                      significant that the World Health Organization (WHO)
+                      recently ... FIGO.org www.figo.org Paracetamol
+                      (acetaminophen) use during pregnancy and autism risk:
+                      evidence does not support causal association - FIGO.org
+                      The weight of scientific evidence, particularly from the
+                      largest and most methodologically rigorous studies
+                      employing sibling control designs, shows no causal ... FDA
+                      www.fda.gov FDA Responds to Evidence of Possible
+                      Association Between Autism and Acetaminophen Use During
+                      Pregnancy Evidence in recent years has suggested a
+                      correlation between acetaminophen use during pregnancy and
+                      subsequent diagnosis of conditions like autism and ADHD.
+                      ... FIGO.org www.figo.org Paracetamol (acetaminophen) use
+                      during pregnancy and autism risk: evidence does not
+                      support causal association - FIGO.org These statements
+                      contradict established medical guidance from major
+                      obstetric organisations worldwide, which consistently
+                      recommend paracetamol as the safest ... PubMed Central
+                      pmc.ncbi.nlm.nih.gov Politics v. science: How President
+                      Trump's war on science impacted public health and
+                      environmental regulation - PubMed Central This type of
+                      scientific censorship was widespread during the Trump
+                      administration, having been documented at 20 federal
+                      bodies—more than any other type of ... PubMed Central
+                      pmc.ncbi.nlm.nih.gov
+                      <p>
+                        Politics v. science: How PresidentTrump's war on science
+                        impacted public health and environmental regulation -
+                        PubMed Central In total, during the Trump
+                        administration, climate change and other scientific
+                        information was removed from the websites of twelve
+                        federal bodies, in most ...
+                      </p>
+                    </div>
+                  </section>
+                </section>
               </section>
             </>
           ) : (
