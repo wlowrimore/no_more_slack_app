@@ -26,7 +26,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
   }
 
   return (
-    <main className="mw-8xl p-12 h-screen flex flex-col items-center">
+    <main className="mw-8xl px-12 h-screen flex flex-col items-center">
       {!session ? (
         <section className="flex flex-col max-w-8xl mx-auto pt-12 pb-40">
           <NoAuthPageMMessage />
@@ -91,7 +91,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                 ))}
               </section>
               {/* Trump Section */}
-              <section className="w-full mx-auto pb-12 pt-4">
+              <section className="w-full mx-auto py-16">
                 <h1 className="capitalize text-2xl text-amber-200 font-semibold tracking-wide flex pb-4">
                   Getting to know your convicted President of 34 felony counts -
                   <span className="text-red-500/90">&nbsp;Donald J. Trump</span>
@@ -163,7 +163,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                 </div>
               </section>
               {/* Trump - Epstein Bromance Section */}
-              <section className="w-full mx-auto pb-12 pt-4">
+              <section className="w-full mx-auto py-16">
                 <h1 className="capitalize text-2xl text-amber-200 font-semibold tracking-wide flex pb-4">
                   The Trump - Epstein &quot;Bromance&quot; -
                   <span className="text-red-500/90">
@@ -213,7 +213,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                 </div>
               </section>
               {/* Health Administration */}
-              <section className="flex flex-col mx-auto">
+              <section className="flex flex-col mx-auto pt-12 pb-16">
                 {/* Robert F. Kennedy Jr. */}
                 <div className="w-full mx-auto pb-12 pt-4">
                   <h1 className="capitalize text-2xl text-amber-200 font-semibold tracking-wide flex pb-4">
@@ -235,8 +235,8 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                       </div>
                       <div className="text-sm flex flex-col pt-2 px-2 text-amber-100 tracking-wider">
                         <span className="w-fit font-semibold pb-0.5 border-b border-amber-200/50 text-amber-200 text-lg">
-                          Robert F. Kennedy Jr. (Secretary of Health and Human
-                          Services | HHS)
+                          Robert F. Kennedy Jr. &#40;Secretary of Health and
+                          Human Services | HHS&#41;
                         </span>
                         <br />
 
@@ -275,8 +275,8 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                         <div className="w-full flex mx-auto">
                           <div className="w-full text-sm flex flex-col py-2 text-amber-100 tracking-wider">
                             <span className="w-fit font-semibold pb-0.5 border-b border-amber-200/50 text-amber-200 text-lg">
-                              Dr. Mehmet Oz (Administrator for the Centers for
-                              Medicare & Medicaid Services |CMS)
+                              Dr. Mehmet Oz &#40;Administrator for the Centers
+                              for Medicare & Medicaid Services |CMS&#41;
                             </span>
                             <br />
 
@@ -297,16 +297,17 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                               </li>
                               <ul className="list-disc ml-6">
                                 <li>
-                                  He is a real doctor (M.D., Professor Emeritus
-                                  of Surgery at Columbia University), but has no
-                                  prior experience in federal health
-                                  administration. His television career was
-                                  marked by strong criticism from the medical
-                                  community for promoting unproven and
-                                  scientifically dubious health supplements and
-                                  treatments. He is now responsible for agencies
-                                  managing health insurance for over 160 million
-                                  Americans and a multi-trillion dollar budget.
+                                  He is a real doctor &#40;M.D., Professor
+                                  Emeritus of Surgery at Columbia
+                                  University&#41;, but has no prior experience
+                                  in federal health administration. His
+                                  television career was marked by strong
+                                  criticism from the medical community for
+                                  promoting unproven and scientifically dubious
+                                  health supplements and treatments. He is now
+                                  responsible for agencies managing health
+                                  insurance for over 160 million Americans and a
+                                  multi-trillion dollar budget.
                                 </li>
                               </ul>
                             </ul>
@@ -328,7 +329,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
               </section>
               {/* Scientific Consensus VS Administration Claims */}
               <section className="w-full mx-auto pb-32 pt-4">
-                <div className="w-full flex flex-col justify-center items-center text-2xl pb-4">
+                <div className="w-full flex flex-col justify-center items-center text-2xl pt-16 pb-4">
                   <h1 className="text-3xl flex flex-col items-center text-amber-200 font-semibold tracking-wide capitalize">
                     Scientific Consensus VS. Administration Claims
                     <p className="text-red-500/90">
@@ -343,7 +344,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                   </h1>
                 </div>
 
-                <section className="grid grid-cols-2 gap-6">
+                <section className="grid grid-cols-2 gap-6 pb-6">
                   {/* Left Column */}
                   <div className="w-full mx-auto bg-amber-500/20 border border-amber-500/40 rounded-xl">
                     <div className="text-sm flex flex-col px-3 py-3 text-amber-100 tracking-wider">
@@ -369,10 +370,10 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                             Safety & Autism:
                           </span>{" "}
                           Decades of comprehensive, large-scale studies by
-                          organizations worldwide (including the CDC, WHO, and
-                          major medical societies) have repeatedly found no
-                          causal link between vaccines and autism spectrum
-                          disorder (ASD). The 1998 study that originally
+                          organizations worldwide &#40;including the CDC, WHO,
+                          and major medical societies&#41; have repeatedly found
+                          no causal link between vaccines and autism spectrum
+                          disorder &#40;ASD&#41;. The 1998 study that originally
                           suggested a link was retracted by the journal The
                           Lancet and the lead author's medical license was
                           revoked due to fraud.
@@ -381,12 +382,13 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                           <span className="text-lg flex items-centerfont-semibold text-amber-200">
                             Preventable Disease:
                           </span>{" "}
-                          Widespread vaccination creates community immunity (or
-                          "herd protection"), which protects vulnerable
-                          populations who cannot be vaccinated (infants, the
-                          elderly, or those with compromised immune systems).
-                          When vaccination rates drop, highly infectious
-                          diseases like measles can and do return in outbreaks.
+                          Widespread vaccination creates community immunity
+                          &#40;or "herd protection"&#41;, which protects
+                          vulnerable populations who cannot be vaccinated
+                          &#40;infants, the elderly, or those with compromised
+                          immune systems. When vaccination rates drop, highly
+                          infectious diseases like measles can and do return in
+                          outbreaks.
                         </li>
                       </ul>
                     </div>
@@ -395,7 +397,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                   <div className="w-full mx-auto bg-amber-500/20 border border-amber-500/40 rounded-xl">
                     <div className="text-sm flex flex-col px-3 py-3 text-amber-100 tracking-wider">
                       <h3 className="w-fit font-semibold text-amber-200 text-lg underline ">
-                        Acetaminophen (Tylenol) and Autism
+                        Acetaminophen &#40;Tylenol&#41; and Autism
                       </h3>
                       <h4 className="w-fit text-amber-100 mb-3">
                         The claim that acetaminophen use during pregnancy causes
@@ -408,7 +410,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                             The Findings:
                           </span>{" "}
                           Some observational studies have shown a correlation
-                          (or association) between frequent or prolonged
+                          &#40;or association&#41; between frequent or prolonged
                           prenatal acetaminophen use and higher rates of
                           neurodevelopmental issues.
                         </li>
@@ -418,11 +420,11 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                           </span>{" "}
                           Correlation is not causation. The most
                           methodologically rigorous studies, particularly those
-                          using sibling control analysis (the gold standard for
-                          controlling shared genetic and environmental factors
-                          within a family), have found no evidence of an
-                          increased risk of autism when familial confounding
-                          factors are properly accounted for.
+                          using sibling control analysis &#40;the gold standard
+                          for controlling shared genetic and environmental
+                          factors within a family&#41;, have found no evidence
+                          of an increased risk of autism when familial
+                          confounding factors are properly accounted for.
                         </li>
                         <li>
                           <span className="text-lg flex items-centerfont-semibold text-amber-200">
@@ -440,7 +442,8 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                     </div>
                   </div>
                 </section>
-                <section className="w-full mx-auto pb-32 pt-12">
+                {/* Precedent of Scientific Interference */}
+                <section className="w-full mx-auto">
                   <div className="w-full mx-auto bg-amber-500/20 border border-amber-500/40 rounded-xl">
                     <div className="text-sm flex flex-col px-3 py-3 text-amber-100 tracking-wider">
                       <div className="w-full flex flex-col justify-center items-center text-2xl">
@@ -455,7 +458,7 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                             previous Trump administration faced widespread
                             criticism from scientific bodies for what was
                             documented as political interference with federal
-                            science agencies (such as the CDC and EPA).
+                            science agencies &#40;such as the CDC and EPA&#41;.
                           </p>
                           <p className="max-w-11/16 text-center text-[1rem] text-amber-100 tracking-wider leading-snug pt-6">
                             Actions included suppressing, downplaying, or
@@ -468,31 +471,36 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                       </div>
                     </div>
                   </div>
+                  {/* Source Links */}
                   <section className="w-full mx-auto py-12">
-                    <div className="max-w-11/16 mx-auto text-center text-[1rem] text-amber-100 tracking-wider leading-snug pt-6">
-                      <p className="text-lg pb-3 text-amber-200 text-start">
+                    <div className="flex items-center pt-16">
+                      <div className="w-full h-[0.05rem] bg-amber-200 rounded-full"></div>
+                      <p className="w-full text-2xl text-amber-200 text-center">
                         If you would like to further explore these issues please
-                        visit the following source links for more information:
+                        visit the following source links for more information.
                       </p>
+                      <div className="w-full h-[0.05rem] bg-amber-200 rounded-full"></div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4 mx-auto text-center text-[1rem] text-amber-100 tracking-wider leading-snug pt-2">
                       <div>
                         <Link
                           href="https://www.pbs.org/newshour/politics/who-are-the-people-trump-has-picked-for-key-positions-in-his-second-administration-so-far#:~:text=Director%20of%20National%20Intelligence%3A%20Tulsi,Trump%20prizing%20loyalty%20over%20experience."
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
                             <span className="w-fit flex flex-col text-lg text-white mb-2">
                               PBS www.pbs.org
                             </span>{" "}
-                            <span>
+                            <p>
                               Who are the people Trump has picked for key
                               positions in his second administration so far
                               Director of National Intelligence: Tulsi Gabbard.
                               Former Hawaii Rep. Tulsi Gabbard has been tapped
                               by Trump to be director of national intelligence,
                               another ...
-                            </span>
-                          </p>
+                            </p>
+                          </div>
                         </Link>
                       </div>
                       <div>
@@ -501,18 +509,18 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
                             <span className="w-fit flex flex-col text-lg text-white mb-2">
                               Verywell Health www.verywellhealth.com
                             </span>{" "}
-                            <span>
+                            <p>
                               How Dr. Oz Could Change Medicare and Medicaid as
                               Head of CMS - Verywell Health President-elect
                               Donald Trump nominated the television personality
                               Dr. Mehmet Oz, popularly known as Dr. Oz, to be
                               the administrator of the Centers for Medicare ...
-                            </span>
-                          </p>
+                            </p>
+                          </div>
                         </Link>
                       </div>
                       <div>
@@ -521,18 +529,18 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
                             <span className="w-fit flex flex-col text-lg text-white mb-2">
                               HealthyChildren.org www.healthychildren.org
                             </span>{" "}
-                            <span>
+                            <p>
                               Vaccine Safety: Examine the Evidence -
                               HealthyChildren.org As a parent, you can be
                               reassured to know that there have been hundreds of
                               large-scale studies around the world on vaccine
                               safety during the past few decades. ...
-                            </span>
-                          </p>
+                            </p>
+                          </div>
                         </Link>
                       </div>
                       <div>
@@ -541,73 +549,198 @@ const FactsPageComp: React.FC<HistoricalDocumentsType> = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <p className="text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
                             <span className="w-fit flex flex-col text-lg text-white mb-2">
                               PBS www.pbs.org
                             </span>{" "}
-                            <span>
+                            <p>
                               12 ways RFK Jr. has undercut vaccine confidence as
                               health secretary | PBS News Days later, Kennedy
                               and the Trump administration repeated the claim,
                               without evidence, that vaccines contributed to
                               autism, a theory that has been thoroughly ...
-                            </span>
-                          </p>
+                            </p>
+                          </div>
                         </Link>
                       </div>
-                      12 ways RFK Jr. has undercut vaccine confidence as health
-                      secretary | PBS News Days later, Kennedy and the Trump
-                      administration repeated the claim, without evidence, that
-                      vaccines contributed to autism, a theory that has been
-                      thoroughly ... Our World in Data ourworldindata.org
-                      Vaccination - Our World in Data Vaccination. Vaccine
-                      technology has advanced dramatically. Vaccination helped
-                      eradicate smallpox worldwide. Vaccines have massively
-                      reduced the rates of ... Our World in Data
-                      ourworldindata.org Vaccination - Our World in Data
-                      Vaccines work by safely training the immune system to
-                      recognize and fight pathogens before they can cause
-                      serious illness. When enough people are vaccinated, ...
-                      National Foundation for Infectious Diseases www.nfid.org
-                      Vaccines Save Lives: What Is Driving Vaccine-Preventable
-                      Disease Outbreaks? - NFID When a community's immunization
-                      rates drop, disease inevitably follows. The problem is so
-                      significant that the World Health Organization (WHO)
-                      recently ... FIGO.org www.figo.org Paracetamol
-                      (acetaminophen) use during pregnancy and autism risk:
-                      evidence does not support causal association - FIGO.org
-                      The weight of scientific evidence, particularly from the
-                      largest and most methodologically rigorous studies
-                      employing sibling control designs, shows no causal ... FDA
-                      www.fda.gov FDA Responds to Evidence of Possible
-                      Association Between Autism and Acetaminophen Use During
-                      Pregnancy Evidence in recent years has suggested a
-                      correlation between acetaminophen use during pregnancy and
-                      subsequent diagnosis of conditions like autism and ADHD.
-                      ... FIGO.org www.figo.org Paracetamol (acetaminophen) use
-                      during pregnancy and autism risk: evidence does not
-                      support causal association - FIGO.org These statements
-                      contradict established medical guidance from major
-                      obstetric organisations worldwide, which consistently
-                      recommend paracetamol as the safest ... PubMed Central
-                      pmc.ncbi.nlm.nih.gov Politics v. science: How President
-                      Trump's war on science impacted public health and
-                      environmental regulation - PubMed Central This type of
-                      scientific censorship was widespread during the Trump
-                      administration, having been documented at 20 federal
-                      bodies—more than any other type of ... PubMed Central
-                      pmc.ncbi.nlm.nih.gov
-                      <p>
-                        Politics v. science: How PresidentTrump's war on science
-                        impacted public health and environmental regulation -
-                        PubMed Central In total, during the Trump
-                        administration, climate change and other scientific
-                        information was removed from the websites of twelve
-                        federal bodies, in most ...
-                      </p>
+                      <div>
+                        <Link
+                          href="https://ourworldindata.org/vaccination#:~:text=in%20August%202025.-,Vaccination,infants%20worldwide%20receive%20vaccinations%20annually"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              Our World in Data ourworldindata.org
+                            </span>{" "}
+                            <p>
+                              Vaccination - Our World in Data Vaccination.
+                              Vaccine technology has advanced dramatically.
+                              Vaccination helped eradicate smallpox worldwide.
+                              Vaccines have massively reduced the rates of ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://ourworldindata.org/vaccination#:~:text=Vaccines%20work%20by%20safely%20training,who%20can't%20get%20vaccinated."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              Our World in Data ourworldindata.org
+                            </span>{" "}
+                            <p>
+                              Vaccination - Our World in Data Vaccines work by
+                              safely training the immune system to recognize and
+                              fight pathogens before they can cause serious
+                              illness. When enough people are vaccinated, ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.nfid.org/vaccines-save-lives-what-is-driving-vaccine-preventable-disease-outbreaks/."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              National Foundation for Infectious Diseases
+                              www.nfid.org
+                            </span>{" "}
+                            <p>
+                              Vaccines Save Lives: What Is Driving
+                              Vaccine-Preventable Disease Outbreaks? - NFID When
+                              a community&apos;s immunization rates drop,
+                              disease inevitably follows. The problem is so
+                              significant that the World Health Organization
+                              &#40;WHO&#41; recently ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.figo.org/paracetamol-acetaminophen-use-during-pregnancy-and-autism-risk-evidence-does-not-support-causal#:~:text=The%20weight%20of%20scientific%20evidence,pregnancy%20and%20autism%20spectrum%20disorders."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              FIGO.org www.figo.org
+                            </span>{" "}
+                            <p>
+                              Paracetamol &#40;acetaminophen&#41; use during
+                              pregnancy and autism risk: evidence does not
+                              support causal association - FIGO.org The weight
+                              of scientific evidence, particularly from the
+                              largest and most methodologically rigorous studies
+                              employing sibling control designs, shows no causal
+                              ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.fda.gov/news-events/press-announcements/fda-responds-evidence-possible-association-between-autism-and-acetaminophen-use-during-pregnancy#:~:text=Evidence%20in%20recent%20years%20has,Birth%20Cohort%2C%20find%20this%20association."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              FDA www.fda.gov
+                            </span>{" "}
+                            <p>
+                              FDA Responds to Evidence of Possible Association
+                              Between Autism and Acetaminophen Use During
+                              Pregnancy Evidence in recent years has suggested a
+                              correlation between acetaminophen use during
+                              pregnancy and subsequent diagnosis of conditions
+                              like autism and ADHD. ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://www.figo.org/paracetamol-acetaminophen-use-during-pregnancy-and-autism-risk-evidence-does-not-support-causal"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              FIGO.org www.figo.org
+                            </span>{" "}
+                            <p>
+                              Paracetamol &#40;acetaminophen&#41; use during
+                              pregnancy and autism risk: evidence does not
+                              support causal association - FIGO.org These
+                              statements contradict established medical guidance
+                              from major obstetric organisations worldwide,
+                              which consistently recommend paracetamol as the
+                              safest ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8793038/#:~:text=This%20type%20of%20scientific%20censorship,type%20of%20anti%2Dscience%20action."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              PubMed Central pmc.ncbi.nlm.nih.gov
+                            </span>{" "}
+                            <p>
+                              Politics v. science: How President Trump's war on
+                              science impacted public health and environmental
+                              regulation - PubMed Central This type of
+                              scientific censorship was widespread during the
+                              Trump administration, having been documented at 20
+                              federal bodies—more than any other type of ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link
+                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8793038/#:~:text=In%20total%2C%20during%20the%20Trump,the%20direction%20of%20administration%20officials."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex flex-col justify-center min-h-[12rem] text-sky-400 text-start hover:text-sky-500 hover:bg-neutral-400/20 hover:border-transparent transition-colors duration-200 my-2 border border-slate-400/40 rounded py-2 px-4">
+                            <span className="w-fit flex flex-col text-lg text-white mb-2">
+                              PubMed Central pmc.ncbi.nlm.nih.gov
+                            </span>{" "}
+                            <p>
+                              Politics v. science: How PresidentTrump's war on
+                              science impacted public health and environmental
+                              regulation - PubMed Central In total, during the
+                              Trump administration, climate change and other
+                              scientific information was removed from the
+                              websites of twelve federal bodies, in most ...
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
                     </div>
                   </section>
                 </section>
+                <div className="flex justify-center mx-auto text-sm text-amber-200 tracking-wider">
+                  <p className="mb-[-2rem]">
+                    Disclaimer: This information is based on public records,
+                    judicial proceedings, and documented reports. The legal
+                    status of various charges and judgments may change due to
+                    ongoing trials, appeals, or legal rulings.
+                  </p>
+                </div>
               </section>
             </>
           ) : (
