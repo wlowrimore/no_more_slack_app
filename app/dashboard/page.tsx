@@ -1,11 +1,12 @@
-// app/dashboard/page.tsx
 import { auth } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
-// import TopHeadlines from "@/components/dashboard/TopHeadlines";
-// import TopicSelector from "@/components/dashboard/TopicSelector";
-// import TopicWidgetsGrid from "@/components/dashboard/TopicWidgetsGrid";
-// import MyRepresentatives from "@/components/dashboard/MyRepresentatives";
-// import ConstitutionalQuickRef from "@/components/dashboard/ConstitutionalQuickRef";
+
+import ApprovalRatingsWidget from "../components/dashboard/widgets/ApprovalRatingsWidget";
+import BillTrackerWidget from "../components/dashboard/widgets/BillTrackerWidget";
+import ExecutiveOrdersWidget from "../components/dashboard/widgets/ExecutiveOrdersWidget";
+import SupremeCourtWidget from "../components/dashboard/widgets/SupremeCourtWidget";
+import VotingInfoWidget from "../components/dashboard/widgets/VotingInfoWidget";
+import VotingRightsWidget from "../components/dashboard/widgets/VotingRightsWidget";
 
 export default async function DashboardPage() {
   const session = await auth();
@@ -26,6 +27,12 @@ export default async function DashboardPage() {
             Stay informed with facts, not narratives
           </p>
         </div>
+        <ApprovalRatingsWidget />
+        <BillTrackerWidget />
+        <ExecutiveOrdersWidget />
+        <SupremeCourtWidget />
+        <VotingInfoWidget />
+        <VotingRightsWidget />
 
         {/* Top Headlines - 2 Column Grid */}
         {/* <TopHeadlines /> */}
