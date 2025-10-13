@@ -1,5 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { getWidgetData } from "@/lib/sanityQueries";
+
 import {
   Card,
   CardContent,
@@ -9,39 +12,69 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FileText, TrendingUp, Clock } from "lucide-react";
-
-const activeBills = [
-  {
-    id: "HR-1234",
-    title: "Voting Rights Expansion Act",
-    status: "In Committee",
-    statusColor: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
-    impact: "High",
-    summary:
-      "Expands early voting periods and restores Voting Rights Act provisions",
-  },
-  {
-    id: "S-5678",
-    title: "Privacy Protection Reform",
-    status: "Passed Senate",
-    statusColor: "bg-green-500/10 text-green-400 border-green-500/20",
-    impact: "High",
-    summary:
-      "Requires tech companies to protect user data and limit data collection",
-  },
-  {
-    id: "HR-9012",
-    title: "Police Reform Bill",
-    status: "Debate",
-    statusColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-    impact: "High",
-    summary:
-      "Implements national standards for use of force and qualified immunity",
-  },
-];
 
 export default function BillTrackerWidget() {
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const widgetData = await getWidgetData("bill-tracker");
+      console.log("BILL TRACKER WIDGET DATA", widgetData);
+      setData(widgetData);
+    }
+    fetchData();
+  }, []);
+
+  const widgetData = data;
+
+  if (!widgetData) {
+    return (
+      <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
+        <CardContent className="p-6">
+          <p className="text-slate-400 text-center">
+            No bill data available. Please add data in Sanity Studio.
+          </p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  const chartData =
+    widgetData.chartData?.map((item: any) => ({
+      name: item.label,
+      rating: item.value,
+      ...(item.value2 && { comparison: item.value2 }),
+    })) || [];
+
+  // const widgetData = data;
+
+  // if (!widgetData) {
+  //   return (
+  //     <Card className="bg-slate-800/50 border-slate-700">
+  //       <CardContent className="p-6">
+  //         <p className="text-slate-400 text-center">No bill data available.</p>
+  //       </CardContent>
+  //     </Card>
+  //   );
+  // }
+
+  const bills = widgetData.listData?.slice(0, 3) || [];
+
+  const statusColors: Record<string, string> = {
+    "In Committee": "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+    "Passed Senate": "bg-green-500/10 text-green-400 border-green-500/20",
+    "Passed House": "bg-green-500/10 text-green-400 border-green-500/20",
+    Debate: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+    Signed: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+    Vetoed: "bg-red-500/10 text-red-400 border-red-500/20",
+  };
+
+  const impactColors: Record<string, string> = {
+    High: "bg-red-500/10 text-red-400 border-red-500/20",
+    Medium: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+    Low: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  };
+
   return (
     <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
       <CardHeader>
@@ -54,9 +87,9 @@ export default function BillTrackerWidget() {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        {activeBills.map((bill) => (
+        {bills.map((bill: any, index: number) => (
           <div
-            key={bill.id}
+            key={index}
             className="p-4 bg-slate-900/50 rounded-lg border border-slate-700"
           >
             <div className="flex items-start justify-between gap-3 mb-2">
@@ -66,9 +99,14 @@ export default function BillTrackerWidget() {
                     variant="outline"
                     className="text-slate-400 border-slate-600"
                   >
-                    {bill.id}
+                    {bill.subtitle}
                   </Badge>
-                  <Badge variant="outline" className={bill.statusColor}>
+                  <Badge
+                    variant="outline"
+                    className={
+                      statusColors[bill.status] || statusColors["Debate"]
+                    }
+                  >
                     {bill.status}
                   </Badge>
                 </div>
@@ -76,21 +114,28 @@ export default function BillTrackerWidget() {
                   {bill.title}
                 </h4>
               </div>
-              <Badge
-                variant="outline"
-                className="bg-red-500/10 text-red-400 border-red-500/20 shrink-0"
-              >
-                {bill.impact} Impact
-              </Badge>
+              {bill.impact && (
+                <Badge
+                  variant="outline"
+                  className={`${impactColors[bill.impact]} shrink-0`}
+                >
+                  {bill.impact} Impact
+                </Badge>
+              )}
             </div>
-            <p className="text-sm text-slate-400 mb-3">{bill.summary}</p>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="w-full text-blue-400 hover:bg-slate-800"
-            >
-              Track This Bill
-            </Button>
+            <p className="text-sm text-slate-400 mb-3">{bill.description}</p>
+            {bill.link && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className="w-full text-blue-400 hover:bg-slate-800"
+                asChild
+              >
+                <a href={bill.link} target="_blank" rel="noopener noreferrer">
+                  Read Full Bill
+                </a>
+              </Button>
+            )}
           </div>
         ))}
 
@@ -98,10 +143,10 @@ export default function BillTrackerWidget() {
           <p className="text-xs text-slate-400 mb-2 font-semibold">
             KEY INSIGHT:
           </p>
-          <p className="text-sm text-slate-300">
-            {activeBills.length} high-impact bills are currently in various
-            stages. Stay informed on legislation that directly affects your
-            rights.
+          <p className="text-sm text-slate-300">{widgetData.keyInsight}</p>
+          <p className="text-xs text-slate-500 mt-2">
+            Source: {widgetData.dataSource} • Updated:{" "}
+            {new Date(widgetData.lastUpdated).toLocaleDateString()}
           </p>
         </div>
       </CardContent>

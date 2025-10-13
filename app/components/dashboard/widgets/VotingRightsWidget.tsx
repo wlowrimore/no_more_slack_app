@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { getWidgetData } from "@/lib/sanityQueries";
 import {
   Card,
   CardContent,
@@ -19,15 +21,21 @@ import {
   Legend,
 } from "recharts";
 
-const votingData = [
-  { state: "FL", restrictions: 5, expansions: 2 },
-  { state: "GA", restrictions: 8, expansions: 1 },
-  { state: "TX", restrictions: 7, expansions: 3 },
-  { state: "CA", restrictions: 1, expansions: 9 },
-  { state: "NY", restrictions: 2, expansions: 7 },
-];
+export default async function VotingRightsWidget() {
+  const [data, setData] = useState<any>(null);
 
-export default function VotingRightsWidget() {
+  useEffect(() => {
+    async function fetchData() {
+      const widgetData = await getWidgetData("voting-rights");
+      console.log("VOTING RIGHTS WIDGET DATA", widgetData);
+      setData(widgetData);
+    }
+    fetchData();
+  }, []);
+
+  const votingData = data?.chartData;
+
+  console.log("VOTING RIGHTS WIDGET DATA", votingData);
   return (
     <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
       <CardHeader>

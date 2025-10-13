@@ -1,5 +1,8 @@
 "use client";
 
+import { useState, useEffect, use } from "react";
+import { getWidgetData } from "@/lib/sanityQueries";
+
 import {
   Card,
   CardContent,
@@ -10,44 +13,73 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, ExternalLink, AlertCircle } from "lucide-react";
-import { useEffect, useState } from "react";
 
 interface VotingInfoWidgetProps {
   address?: string;
 }
 
-export default function VotingInfoWidget({
-  address = "Pompano Beach, FL",
-}: VotingInfoWidgetProps) {
-  const [voterInfo, setVoterInfo] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+export default function VotingInfoWidget({}: VotingInfoWidgetProps) {
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    fetch(`/api/google-civic/voter-info?address=${encodeURIComponent(address)}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setVoterInfo(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching voter info:", err);
-        setLoading(false);
-      });
-  }, [address]);
+    async function fetchData() {
+      const widgetData = await getWidgetData("voting-info");
+      console.log("VOTING INFO WIDGET DATA", widgetData);
+      setData(widgetData);
+    }
+    fetchData();
+  }, []);
 
-  if (loading) {
+  const widgetData = data;
+  const voterInfo = widgetData?.voterInfo;
+
+  // Fallback if no data in Sanity yet
+  if (!widgetData) {
     return (
       <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
         <CardContent className="p-6">
           <p className="text-slate-400 text-center">
-            Loading voter information...
+            No approval ratings data available. Please add data in Sanity
+            Studio.
           </p>
         </CardContent>
       </Card>
     );
   }
 
-  if (!voterInfo || voterInfo.error) {
+  // Transform Sanity data to chart format
+  // Sanity gives us: [{ label: "President", value: 42 }, ...]
+  // Chart needs: [{ name: "President", rating: 42 }, ...]
+  const chartData =
+    widgetData.chartData?.map((item: any) => ({
+      name: item.label,
+      rating: item.value,
+      // Add any additional values
+      ...(item.value2 && { comparison: item.value2 }),
+    })) || [];
+
+  if (!voterInfo) {
+    return (
+      <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
+        <CardHeader>
+          <CardTitle className="text-white flex items-center gap-2">
+            <span className="text-2xl">🗳️</span>
+            Your Voting Information
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+            <p className="text-sm text-slate-300">
+              No voter info available. Check back closer to election day.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  const address = voterInfo.address || "";
+  if (!address) {
     return (
       <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
         <CardHeader>
@@ -68,7 +100,7 @@ export default function VotingInfoWidget({
     );
   }
 
-  const election = voterInfo.election;
+  const election = voterInfo.election || null;
   const pollingLocations = voterInfo.pollingLocations || [];
   const contests = voterInfo.contests || [];
 

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Card,
   CardContent,
@@ -9,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
+import { getWidgetData } from "@/lib/sanityQueries";
 
 const executiveOrders = [
   {
@@ -34,7 +33,9 @@ const executiveOrders = [
   },
 ];
 
-export default function ExecutiveOrdersWidget() {
+export default async function ExecutiveOrdersWidget() {
+  const widgetData = await getWidgetData("executive-orders");
+
   return (
     <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
       <CardHeader>

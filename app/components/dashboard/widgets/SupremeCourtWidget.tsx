@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Card,
   CardContent,
@@ -9,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Scale } from "lucide-react";
+import { getWidgetData } from "@/lib/sanityQueries";
 
 const cases = [
   {
@@ -34,7 +33,9 @@ const cases = [
   },
 ];
 
-export default function SupremeCourtWidget() {
+export default async function SupremeCourtWidget() {
+  const widgetData = await getWidgetData("supreme-court");
+
   return (
     <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
       <CardHeader>
