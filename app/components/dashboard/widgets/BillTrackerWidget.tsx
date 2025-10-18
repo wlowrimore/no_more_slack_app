@@ -78,7 +78,7 @@ export default function BillTrackerWidget() {
   return (
     <Card className="bg-slate-800/50 border-slate-700 backdrop-blur">
       <CardHeader>
-        <CardTitle className="text-white flex items-center gap-2">
+        <CardTitle className="text-amber-200 flex items-center gap-2">
           <span className="text-2xl">📜</span>
           Active Legislation Tracker
         </CardTitle>
